@@ -2,10 +2,12 @@ import React from 'react';
 
 const LifeItem = React.createClass({
     render() {
+        const quan = this.props.hasQuan ? <img src='' /> : '';
         return (
             <a href={this.props.url}>
-                <em className='icon'></em>
-                <p>{this.props.name}</p>
+                <img src={this.props.icon}/>
+                <div>{this.props.name}</div>
+                <span>{quan}</span>
             </a>
         );
     }

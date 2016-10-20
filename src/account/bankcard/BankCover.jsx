@@ -9,7 +9,7 @@ const BankLevel = React.createClass({
         });
         return (
             <div>
-                <span></span>
+                <span>等级：</span>
                 {stars}
             </div>
         );
@@ -28,6 +28,7 @@ export const BankCover = React.createClass({
         };
     },
     render() {
+        const defaultView = this.state.isDefault ? <img src='' /> : '';
         return (
             <div>
                 <div>
@@ -40,7 +41,7 @@ export const BankCover = React.createClass({
                     <span>${this.state.cardId}</span>
                 </div>
                 <BankLevel level={this.state.level}/>
-                <span></span>
+                <span>{defaultView}</span>
             </div>
         );
     }

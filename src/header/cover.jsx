@@ -1,4 +1,15 @@
 import React from 'react';
-import {render} from 'react-dom';
+import GroupProductLineTypes from 'GroupProductLineTypes';
 
-React.createClass()
+export const Cover = React.createClass({
+    render() {
+        const lineViews = this.props.lines.map((line) => {
+            return (
+                <GroupProductLineTypes name={line.name} types={line.types} />
+            );
+        });
+        return (
+            <div>{lineViews}</div>
+        );
+    }
+});
